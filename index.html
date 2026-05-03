@@ -1,502 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Green Future</title>
-<meta name="description" content="Green Future is a non-profit renewable energy awareness group sharing public information about clean energy and its benefits for the Earth, animals, and people.">
-
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Cdefs%3E%0A%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2300ff88%22/%3E%0A%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2300b7ff%22/%3E%0A%20%20%3C/linearGradient%3E%0A%3C/defs%3E%0A%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2230%22%20fill%3D%22url%28%23g%29%22/%3E%0A%3Cpath%20d%3D%22M18%2030c4-10%2016-16%2027-11%204%202%207%205%208%209-6-2-11-1-15%202-4%203-6%207-6%2012%200%205%202%209%206%2013-4%201-9%200-13-2-8-5-11-14-10-23-2%201-4%202-6%205%200-3%202-5%204-5%201%200%203%200%205%200z%22%20fill%3D%22white%22/%3E%0A%3C/svg%3E">
-<meta name="theme-color" content="#00ff88">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
 body{
-  font-family:'Inter',sans-serif;
-  background:
-    radial-gradient(circle at 15% 10%, rgba(0,255,136,.16), transparent 0 28%),
-    radial-gradient(circle at 85% 0%, rgba(109,255,208,.16), transparent 0 26%),
-    linear-gradient(180deg,#06110b 0%,#081713 45%,#07120c 100%);
-  color:#eef7f1;
-  overflow-x:hidden;
+font-family:Arial,sans-serif;
+background:#07130d;
+color:white;
+margin:0;
+line-height:1.7;
 }
-body::before{
-  content:'';
-  position:fixed; inset:auto -180px 60px auto;
-  width:640px;height:640px;border-radius:50%;
-  background:radial-gradient(circle, rgba(0,255,136,.18), transparent 65%);
-  z-index:-1;
+header{
+background:linear-gradient(135deg,#00cc66,#00994d);
+padding:20px;
+position:sticky;
+top:0;
 }
-body::after{
-  content:'';
-  position:fixed; inset:120px auto auto -220px;
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle, rgba(0,204,255,.12), transparent 62%);
-  z-index:-1;
-}
-a{color:inherit;text-decoration:none}
 nav{
-  position:fixed; top:0; left:0; right:0;
-  display:flex; align-items:center; justify-content:space-between;
-  padding:20px 7.5%;
-  background:rgba(2,8,5,.42);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
 }
-.logo{
-  display:flex; align-items:center; gap:12px;
-  font-weight:900; letter-spacing:-.03em;
-  font-size:28px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
 }
-.logo-mark{
-  width:42px;height:42px;border-radius:14px;
-  display:grid;place-items:center;
-  background:linear-gradient(135deg,#00ff88,#18b85d);
-  color:#04140b;font-size:22px;
-  box-shadow:0 12px 30px rgba(0,255,136,.2);
-}
-nav ul{display:flex;list-style:none;gap:28px;flex-wrap:wrap}
-nav a{color:#cfe0d6;font-size:15px;font-weight:600;transition:.25s}
-nav a:hover{color:#00ff88}
 .hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:1.08fr .92fr;
-  gap:34px;
-  align-items:center;
-  padding:130px 7.5% 72px;
-}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:10px;
-  padding:10px 16px;border-radius:999px;
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.09);
-  color:#b7c9bf;font-size:14px;font-weight:600;
-  margin-bottom:22px;
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(to bottom,#05210f,#07130d);
 }
 .hero h1{
-  font-size:clamp(46px,6.3vw,78px);
-  line-height:.98;
-  letter-spacing:-.05em;
-  margin-bottom:22px;
-  max-width:11ch;
+font-size:60px;
+max-width:800px;
+margin:auto;
 }
-.hero p{
-  font-size:19px;line-height:1.85;color:#bed0c6;
-  max-width:64ch;margin-bottom:30px;
-}
-.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
-.btn{
-  padding:15px 24px;border-radius:14px;font-weight:800;
-  transition:.25s; border:1px solid transparent;
-  display:inline-flex; align-items:center; gap:10px;
-}
-.primary{background:linear-gradient(135deg,#00ff88,#18b85d);color:#04140b;box-shadow:0 16px 36px rgba(0,255,136,.18)}
-.secondary{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.1)}
-.btn:hover{transform:translateY(-4px)}
-.hero-card{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:32px;
-  padding:34px;
-  backdrop-filter:blur(16px);
-  box-shadow:0 24px 70px rgba(0,0,0,.34);
-}
-.hero-card h3{font-size:28px;margin-bottom:14px}
-.hero-card p{color:#bccdc3;line-height:1.8;font-size:16px}
-.stats{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  margin-top:24px
-}
-.stat-box{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:22px;
-  padding:18px;
-}
-.stat-box h2{font-size:34px;color:#00ff88;margin-bottom:6px}
-.stat-box p{font-size:14px;color:#b6c7bc}
-.section{padding:104px 7.5%}
-.section-title{
-  font-size:clamp(34px,4vw,56px);
-  letter-spacing:-.04em;
-  margin-bottom:12px
-}
-.section-sub{
-  max-width:78ch;
-  color:#b7c8be;
-  line-height:1.85;
-  font-size:18px;
-  margin-bottom:34px
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:22px
+.section{
+max-width:1100px;
+margin:auto;
+padding:80px 20px;
 }
 .card{
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:28px;
-  padding:28px;
-  transition:.3s;
-  box-shadow:0 18px 46px rgba(0,0,0,.18);
+background:rgba(255,255,255,0.06);
+padding:30px;
+border-radius:20px;
+margin-bottom:25px;
+border:1px solid rgba(255,255,255,0.08);
 }
-.card:hover{transform:translateY(-8px);border-color:#00ff88}
-.card h3{font-size:24px;margin-bottom:12px}
-.card p,.story p,.about-box p{color:#bccdc3;line-height:1.85}
-.about-box{
-  background:linear-gradient(135deg, rgba(12,45,26,.95), rgba(8,19,13,.96));
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:34px;
-  padding:34px;
-  box-shadow:0 20px 56px rgba(0,0,0,.22);
+h2{
+color:#00ff88;
+font-size:40px;
 }
-.story{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:30px;
-  padding:30px;
-}
-.story h3{font-size:28px;margin-bottom:10px}
-.highlight{
-  margin-top:28px;
-  background:linear-gradient(135deg,#10321e,#08140d);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:36px;
-  padding:42px;
-  position:relative;
-  overflow:hidden;
-}
-.highlight::before{
-  content:'';
-  position:absolute;
-  width:340px;height:340px;border-radius:50%;
-  background:radial-gradient(circle, rgba(0,255,136,.22), transparent 68%);
-  top:-120px;right:-120px;
-}
-.highlight h2{font-size:clamp(30px,4vw,52px);line-height:1.05;margin-bottom:16px;position:relative}
-.highlight p{position:relative;color:#d6e6dc;line-height:1.9;font-size:18px;max-width:80ch}
-.timeline{
-  display:grid;
-  gap:18px;
-}
-.timeline-item{
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:18px;
-  align-items:start;
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  padding:22px;
-}
-.timeline-item strong{
-  color:#00ff88;
-  font-size:18px;
-}
-.faq{display:grid;gap:14px}
-details{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:20px;
-  padding:18px 20px;
-}
-summary{cursor:pointer;font-weight:800;font-size:18px}
-details p{padding-top:10px;color:#bccdc3;line-height:1.85}
 footer{
-  padding:34px 7.5%;
-  text-align:center;
-  color:#92a49a;
-  border-top:1px solid rgba(255,255,255,.08)
-}
-.backtop{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:54px;
-  height:54px;
-  border-radius:18px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#00ff88,#18b85d);
-  color:#04140b;
-  font-weight:900;
-  box-shadow:0 16px 34px rgba(0,255,136,.18);
-  z-index:999;
-}
-@media(max-width:1000px){
-  nav ul{display:none}
-  .hero{grid-template-columns:1fr}
-  .hero h1{font-size:58px;max-width:none}
-  .section-title{font-size:42px}
-  .highlight h2{font-size:42px}
-  .timeline-item{grid-template-columns:1fr}
+text-align:center;
+padding:30px;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 </style>
 </head>
 <body>
 
+<header>
 <nav>
-  <a class="logo" href="#home" aria-label="Go to home">
-    <div class="logo-mark">🌍</div>
-    <div>Green Future</div>
-  </a>
+<a href="#home" style="font-size:30px;">🌍 Green Future</a>
 
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#energy">Energy</a></li>
-    <li><a href="#benefits">Benefits</a></li>
-    <li><a href="#future">Future</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#mission">Mission</a>
+<a href="#vision">Vision</a>
+<a href="#energy">Energy</a>
+</div>
 </nav>
+</header>
 
 <section class="hero" id="home">
-  <div>
-    <div class="eyebrow">🌱 Non-profit renewable energy awareness</div>
-    <h1>The future of clean energy starts with awareness.</h1>
-    <p>
-      Green Future is a non-profit group advocate sharing information about clean renewable energy
-      and the good it can bring to the Earth, animals, nature, and the people who live here.
-      We keep the content simple, fun to read, and useful for the public.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="#about">Read About Us</a>
-      <a class="btn secondary" href="#energy">Explore Energy</a>
-    </div>
-    <div class="micro">
-      <span>✔ Public awareness</span>
-      <span>✔ Renewable energy only</span>
-      <span>✔ Modern clean design</span>
-    </div>
-  </div>
+<h1>The Future of Clean Renewable Energy Starts With Awareness</h1>
 
-  <div class="hero-card">
-    <h3>Why renewable energy is exciting</h3>
-    <p>
-      Renewable energy is not just a technical topic. It is part of the story of how communities,
-      cities, and countries think about a cleaner future. Solar panels, wind turbines, water power,
-      and geothermal systems all help expand the way the world talks about energy.
-    </p>
-    <div class="stats">
-      <div class="stat-box">
-        <h2>4</h2>
-        <p>Main renewable sources featured</p>
-      </div>
-      <div class="stat-box">
-        <h2>24/7</h2>
-        <p>Public information access</p>
-      </div>
-      <div class="stat-box">
-        <h2>100%</h2>
-        <p>Focused on renewable awareness</p>
-      </div>
-      <div class="stat-box">
-        <h2>🌍</h2>
-        <p>Built for our shared planet</p>
-      </div>
-    </div>
-  </div>
+<p style="max-width:800px;margin:30px auto;font-size:20px;">
+Green Future is a non-profit renewable energy awareness initiative sharing public information about clean and sustainable energy systems and how they may help the Earth, animals, nature, and people around the world.
+</p>
 </section>
 
 <section class="section" id="about">
-  <h2 class="section-title">About Green Future</h2>
-  <div class="about-box">
-    <p>
-      Green Future is a non-profit advocacy group focused on sharing information about renewable energy
-      and the benefits of cleaner and more sustainable energy systems. We believe that public awareness matters
-      because many people want to better understand how renewable energy works and why it is becoming such an important global topic.
-    </p>
-    <br>
-    <p>
-      Our website talks about renewable energy in a simple and friendly way.
-      Instead of technical language that can feel difficult to read, we focus on making information enjoyable,
-      modern, and easy for everyone to explore. We want visitors to feel curious, inspired, and interested while learning about clean energy technologies.
-    </p>
-    <br>
-    <p>
-      Renewable energy is often connected to conversations about cleaner environments, reduced pollution,
-      sustainable infrastructure, and protecting the natural world. Many people support renewable energy because they care about forests,
-      oceans, wildlife, plants, clean air, and future generations.
-    </p>
-    <br>
-    <p>
-      We also believe that renewable energy discussions are not only about electricity.
-      They are about the future of our planet and the kind of world we want to leave behind.
-      Clean energy technologies can inspire innovation, new ideas, and more sustainable ways of thinking.
-    </p>
-    <br>
-    <p>
-      Green Future exists to share information, spark curiosity, and encourage people to explore the exciting world of renewable energy and sustainability.
-      This website is designed as a public awareness platform dedicated to renewable energy topics and clean technology discussions.
-    </p>
-  </div>
+<h2>About Green Future</h2>
+
+<div class="card">
+<p>
+Green Future is a non-profit advocacy group focused on public awareness about renewable energy and sustainable innovation.
+Our goal is to share easy-to-read and engaging information about clean energy technologies including solar, wind, hydropower, and geothermal systems.
+</p>
+
+<p>
+We believe renewable energy is one of the most exciting modern topics because it connects technology, nature, sustainability, and the future of humanity together.
+Around the world, more people are becoming interested in cleaner energy systems and environmentally conscious innovation.
+</p>
+
+<p>
+This website was created to make renewable energy information feel modern, interesting, and enjoyable to read.
+Instead of complicated technical explanations, Green Future presents information in a simple and visually engaging way so more people can explore the topic comfortably.
+</p>
+
+<p>
+We also care deeply about the natural world.
+Many renewable energy conversations are connected to protecting forests, oceans, wildlife, clean air, and future generations.
+The Earth is home to millions of species, ecosystems, and communities, and sustainability discussions continue to grow globally.
+</p>
+
+<p>
+Green Future exists to encourage curiosity, awareness, and positive conversations about renewable energy and the future of sustainable technology.
+</p>
+</div>
+</section>
+
+<section class="section" id="mission">
+<h2>Our Mission</h2>
+
+<div class="card">
+<p>
+Our mission is to share public information about renewable energy and clean technology in a modern, friendly, and engaging way.
+Green Future aims to increase awareness about sustainable energy systems while encouraging curiosity about cleaner and more innovative energy solutions.
+</p>
+
+<p>
+We want visitors to explore renewable energy topics without feeling overwhelmed by technical language.
+By presenting information clearly and creatively, we hope more people become interested in sustainability, environmental awareness, and the future of clean energy innovation.
+</p>
+
+<p>
+Green Future also supports positive discussions about protecting the Earth, respecting nature, and thinking about long-term sustainability for future generations.
+</p>
+</div>
+</section>
+
+<section class="section" id="vision">
+<h2>Our Vision</h2>
+
+<div class="card">
+<p>
+Our vision is a future where renewable energy awareness becomes accessible to everyone.
+We imagine a world where people are more informed about sustainable energy systems and where conversations about clean technology inspire innovation and responsibility.
+</p>
+
+<p>
+Green Future hopes to become a trusted public awareness platform where visitors can explore renewable energy topics in a simple, enjoyable, and inspiring environment.
+</p>
+
+<p>
+We believe the future of renewable energy is connected to modern technology, cleaner infrastructure, environmental sustainability, and a greater appreciation for the planet we all share.
+</p>
+</div>
 </section>
 
 <section class="section" id="energy">
-  <h2 class="section-title">Renewable Energy Sources</h2>
-  <p class="section-sub">
-    Renewable energy comes from natural resources that are continuously replenished by the Earth.
-    These energy systems are discussed around the world because they can support cleaner and more sustainable infrastructure.
-  </p>
-  <div class="grid">
-    <div class="card">
-      <h3>☀ Solar Energy</h3>
-      <p>
-        Solar panels convert sunlight into electricity. Solar power is popular because sunlight is naturally available in many places around the world.
-        Large solar farms and rooftop solar systems are becoming common in modern cities and communities.
-      </p>
-    </div>
-    <div class="card">
-      <h3>🌬 Wind Energy</h3>
-      <p>
-        Wind turbines use natural wind movement to generate electricity. Wind farms can often be found in coastal regions, open plains,
-        and offshore areas where wind conditions are strong.
-      </p>
-    </div>
-    <div class="card">
-      <h3>💧 Hydropower</h3>
-      <p>
-        Hydropower uses flowing water to drive turbines and generate renewable electricity. Many countries have used hydropower systems for decades
-        as part of their energy infrastructure.
-      </p>
-    </div>
-    <div class="card">
-      <h3>🌋 Geothermal Energy</h3>
-      <p>
-        Geothermal systems use heat from beneath the Earth’s surface. This renewable energy source is especially interesting because it comes directly
-        from natural heat inside the planet.
-      </p>
-    </div>
-  </div>
-</section>
+<h2>Renewable Energy Sources</h2>
 
-<section class="section" id="benefits">
-  <h2 class="section-title">Benefits of Renewable Energy</h2>
-  <p class="section-sub">
-    Renewable energy technologies are often discussed because they may support cleaner environments,
-    energy diversity, and long-term sustainability planning.
-  </p>
-  <div class="grid">
-    <div class="card">
-      <h3>🌍 Helping the Earth</h3>
-      <p>
-        Renewable energy is commonly connected to conversations about cleaner energy systems and reducing dependence on limited fossil fuel resources.
-        Many supporters believe cleaner energy can help support environmental sustainability.
-      </p>
-    </div>
-    <div class="card">
-      <h3>🐾 Supporting Animals and Nature</h3>
-      <p>
-        Healthy ecosystems are important for wildlife and biodiversity. Public awareness about sustainability often includes discussions about forests,
-        oceans, marine life, and protecting natural habitats around the world.
-      </p>
-    </div>
-    <div class="card">
-      <h3>👥 Helping People</h3>
-      <p>
-        Renewable energy discussions also focus on innovation, future infrastructure, and new energy possibilities for communities and cities.
-        Modern clean technologies continue to inspire new ideas and development.
-      </p>
-    </div>
-  </div>
+<div class="card">
+<h3>☀ Solar Energy</h3>
+<p>
+Solar power uses sunlight to generate electricity and is one of the fastest-growing renewable energy technologies worldwide.
+</p>
+</div>
 
-  <div class="big-highlight">
-    <h2>A greener future begins with awareness.</h2>
-    <p>
-      Green Future believes renewable energy is more than just a technology topic. It is part of a bigger conversation about sustainability,
-      innovation, responsibility, and the future of our planet. By sharing renewable energy information in a modern and engaging way,
-      we hope more people become interested in clean technologies, environmental awareness, and sustainable ideas that may help shape the future.
-    </p>
-  </div>
-</section>
+<div class="card">
+<h3>🌬 Wind Energy</h3>
+<p>
+Wind turbines use natural wind movement to create electricity and are commonly seen in large open areas and offshore locations.
+</p>
+</div>
 
-<section class="section" id="future">
-  <h2 class="section-title">The Future of Clean Energy</h2>
-  <p class="section-sub">
-    The future of renewable energy continues to evolve through battery storage systems, smart energy grids,
-    electric transportation technologies, and new forms of sustainable infrastructure.
-  </p>
-  <div class="grid">
-    <div class="card">
-      <h3>🔋 Battery Storage</h3>
-      <p>
-        Battery systems help store electricity for later use. This allows renewable energy systems to become more flexible and reliable.
-      </p>
-    </div>
-    <div class="card">
-      <h3>🏙 Smart Infrastructure</h3>
-      <p>
-        Modern smart grids and energy networks can help improve how electricity is distributed and managed in cities and communities.
-      </p>
-    </div>
-    <div class="card">
-      <h3>🚀 Sustainable Innovation</h3>
-      <p>
-        New renewable technologies continue appearing across industries worldwide, showing how rapidly the clean energy conversation continues to grow.
-      </p>
-    </div>
-  </div>
+<div class="card">
+<h3>💧 Hydropower</h3>
+<p>
+Hydropower systems use flowing water to produce electricity and have been part of renewable infrastructure for many decades.
+</p>
+</div>
 
-  <div class="highlight" style="margin-top:28px;">
-    <h2>How people usually discover clean energy ideas</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <strong>1. Curiosity</strong>
-        <p>Someone sees solar panels, wind turbines, or a news article and starts wondering how renewable energy works.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>2. Learning</strong>
-        <p>They read simple explanations about solar, wind, water, and geothermal energy without needing technical jargon.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>3. Discussion</strong>
-        <p>They begin talking about clean energy in terms of the Earth, animals, people, and the future of communities.</p>
-      </div>
-      <div class="timeline-item">
-        <strong>4. Action</strong>
-        <p>Awareness turns into interest, and interest can lead to better conversations about sustainability and modern energy choices.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="faq">
-  <h2 class="section-title">Quick Questions</h2>
-  <p class="section-sub">
-    A few simple answers for visitors who want a friendly overview.
-  </p>
-  <div class="faq">
-    <details>
-      <summary>Why does renewable energy matter?</summary>
-      <p>It gives communities and countries more ways to think about energy while supporting conversations about cleaner and more sustainable systems.</p>
-    </details>
-    <details>
-      <summary>Is renewable energy only about big power plants?</summary>
-      <p>No. It can include rooftop solar, community projects, hydropower, wind systems, and many other modern energy ideas.</p>
-    </details>
-    <details>
-      <summary>Why is public awareness important?</summary>
-      <p>People often want clear information about how clean energy works, why it is discussed, and what changes it may bring for the future.</p>
-    </details>
-  </div>
+<div class="card">
+<h3>🌋 Geothermal Energy</h3>
+<p>
+Geothermal systems use natural heat from beneath the Earth’s surface and represent another important renewable energy source.
+</p>
+</div>
 </section>
 
 <footer>
 Green Future © 2026 · Non-profit Renewable Energy Awareness Initiative
 </footer>
-
-<a class="backtop" href="#home" aria-label="Back to home">↑</a>
 
 </body>
 </html>
