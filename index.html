@@ -1,418 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Green Future</title>
-
-<!-- Earth Icon -->
-<link rel="icon" type="image/png" href="greenearth.png">
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#02150f;
-    color:white;
-    line-height:1.7;
-}
-
-/* NAVBAR */
-nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(0,0,0,0.85);
-    backdrop-filter:blur(10px);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:15px;
-    text-decoration:none;
-    color:white;
-    font-size:2rem;
-    font-weight:bold;
-}
-
-.logo img{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    object-fit:cover;
-    border:3px solid #00ff99;
-    box-shadow:0 0 25px rgba(0,255,150,0.6);
-}
-
-.nav-links{
-    display:flex;
-    gap:30px;
-}
-
-.nav-links a{
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.nav-links a:hover{
-    color:#00ff99;
-}
-
-/* HERO */
-.hero{
-    min-height:100vh;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-    align-items:center;
-    padding:80px 8%;
-    background:
-    radial-gradient(circle at top left, rgba(0,255,140,0.15), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(0,200,255,0.12), transparent 35%);
-}
-
-.hero-text h1{
-    font-size:5rem;
-    line-height:1;
-    margin-bottom:25px;
-}
-
-.hero-text p{
-    font-size:1.2rem;
-    color:#d7d7d7;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    padding:15px 28px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.btn-green{
-    background:#00ff99;
-    color:black;
-}
-
-.btn-dark{
-    border:1px solid rgba(255,255,255,0.2);
-    color:white;
-}
-
-.btn:hover{
-    transform:translateY(-4px);
-}
-
-.hero-card{
-    background:linear-gradient(145deg, rgba(0,255,140,0.15), rgba(255,255,255,0.04));
-    border:1px solid rgba(255,255,255,0.08);
-    padding:40px;
-    border-radius:30px;
-    box-shadow:0 0 40px rgba(0,0,0,0.3);
-}
-
-.hero-card h2{
-    font-size:2.5rem;
-    margin-bottom:20px;
-}
-
-.stats{
-    margin-top:30px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
-}
-
-.stat{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:20px;
-}
-
-.stat h3{
-    color:#00ff99;
-    font-size:2rem;
-}
-
-/* SECTIONS */
-section{
-    padding:90px 8%;
-}
-
-.section-title{
-    font-size:3rem;
-    margin-bottom:25px;
-    color:#00ff99;
-}
-
-.content{
-    max-width:1100px;
-    color:#e3e3e3;
-    font-size:1.1rem;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-    margin-top:40px;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    padding:30px;
-    border-radius:25px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#00ff99;
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#00ff99;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:35px;
-    border-top:1px solid rgba(255,255,255,0.08);
-    color:#bbb;
-    margin-top:60px;
-}
-
-@media(max-width:900px){
-    .hero{
-        grid-template-columns:1fr;
-    }
-
-    .hero-text h1{
-        font-size:3.2rem;
-    }
-
-    nav{
-        flex-direction:column;
-        gap:20px;
-    }
-
-    .nav-links{
-        flex-wrap:wrap;
-        justify-content:center;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<nav>
-    <a href="#home" class="logo">
-        <img src="greenearth.png" alt="Earth Logo">
-        <span>Green Future</span>
-    </a>
-
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#mission">Mission</a>
-        <a href="#vision">Vision</a>
-        <a href="#energy">Energy</a>
-        <a href="#benefits">Benefits</a>
-    </div>
-</nav>
-
-<section class="hero" id="home">
-
-<div class="hero-text">
-<h1>The future of clean energy starts today.</h1>
-
-<p>
-Green Future is a non-profit advocacy group sharing public information about renewable energy and the positive impact it creates for people, animals, nature, and the planet we all share. Our goal is to inspire awareness about cleaner and more sustainable energy solutions for a brighter future.
-</p>
-
-<div class="hero-buttons">
-<a href="#about" class="btn btn-green">Learn More</a>
-<a href="#benefits" class="btn btn-dark">Explore Benefits</a>
-</div>
-</div>
-
-<div class="hero-card">
-<h2>Renewable Energy Overview</h2>
-
-<p>
-Renewable energy comes from natural sources like sunlight, wind, water, and heat from the Earth. Unlike fossil fuels, renewable energy can naturally replenish itself and helps reduce pollution, greenhouse gas emissions, and environmental damage.
-</p>
-
-<div class="stats">
-<div class="stat">
-<h3>100%</h3>
-<p>Focused on renewable energy awareness</p>
-</div>
-
-<div class="stat">
-<h3>Clean</h3>
-<p>Modern energy solutions for a greener world</p>
-</div>
-
-<div class="stat">
-<h3>4+</h3>
-<p>Major renewable energy sources featured</p>
-</div>
-
-<div class="stat">
-<h3>Future</h3>
-<p>Supporting a cleaner tomorrow for all</p>
-</div>
-</div>
-</div>
-
-</section>
-
-<section id="about">
-<h2 class="section-title">About Green Future</h2>
-
-<div class="content">
-<p>
-Green Future is a non-profit advocacy initiative dedicated to sharing information about renewable energy and environmental sustainability. We believe that small awareness today can help create a healthier and cleaner world tomorrow.
-</p>
-
-<br>
-
-<p>
-Our organization highlights how clean energy technologies can positively affect the Earth, wildlife, oceans, forests, communities, and future generations. Renewable energy is not only about electricity — it is about protecting the natural beauty of our planet and reducing harmful pollution that damages ecosystems.
-</p>
-
-<br>
-
-<p>
-By supporting renewable energy awareness, we help people better understand how solar power, wind turbines, hydropower, and geothermal systems contribute to cleaner air, safer environments, and a more sustainable future for humans and animals alike.
-</p>
-</div>
-</section>
-
-<section id="mission">
-<h2 class="section-title">Our Mission</h2>
-
-<div class="content">
-<p>
-Our mission is to promote public awareness about renewable energy and encourage positive conversations about sustainability, environmental responsibility, and modern clean energy technologies. Green Future exists to inform and inspire people around the world about how renewable energy can help create a cleaner, greener, and more hopeful future for Earth.
-</p>
-</div>
-</section>
-
-<section id="vision">
-<h2 class="section-title">Our Vision</h2>
-
-<div class="content">
-<p>
-Our vision is a future where renewable energy becomes a normal part of everyday life, helping reduce pollution, protect wildlife, preserve natural habitats, and improve environmental sustainability worldwide. We imagine communities powered by cleaner technologies that work in harmony with nature and support future generations.
-</p>
-</div>
-</section>
-
-<section id="energy">
-<h2 class="section-title">Renewable Energy Sources</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>☀️ Solar Energy</h3>
-<p>
-Solar panels capture sunlight and transform it into electricity. Solar power is one of the fastest-growing renewable energy technologies in the world and helps reduce dependence on fossil fuels.
-</p>
-</div>
-
-<div class="card">
-<h3>🌬️ Wind Energy</h3>
-<p>
-Wind turbines use natural air movement to generate electricity. Wind farms provide large amounts of clean energy without producing air pollution.
-</p>
-</div>
-
-<div class="card">
-<h3>💧 Hydropower</h3>
-<p>
-Hydropower uses flowing water from rivers and dams to produce electricity. It has been used for generations and remains one of the largest renewable energy sources globally.
-</p>
-</div>
-
-<div class="card">
-<h3>🌋 Geothermal Energy</h3>
-<p>
-Geothermal systems use heat from beneath the Earth’s surface to generate power and heating. It is reliable and available year-round.
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="benefits">
-<h2 class="section-title">Benefits of Renewable Energy</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Cleaner Air</h3>
-<p>
-Renewable energy helps reduce harmful air pollution and greenhouse gas emissions that contribute to climate change.
-</p>
-</div>
-
-<div class="card">
-<h3>Protecting Wildlife</h3>
-<p>
-Cleaner environments support healthier ecosystems and help protect animals, forests, oceans, and natural habitats.
-</p>
-</div>
-
-<div class="card">
-<h3>Sustainable Future</h3>
-<p>
-Renewable energy sources naturally replenish themselves and help ensure future generations have access to cleaner energy.
-</p>
-</div>
-
-<div class="card">
-<h3>Modern Innovation</h3>
-<p>
-Clean energy technologies continue to improve, bringing smarter and more efficient ways to power homes and communities.
-</p>
-</div>
-
-</div>
-</section>
-
-<footer>
-Green Future © 2026 | Renewable Energy Awareness Initiative
-</footer>
-
-</body>
-</html>
+
+========================
+GREEN FUTURE WEBSITE TEXT
+========================
+
+HERO SECTION
+------------
+
+The future of clean energy starts with awareness.
+
+Green Future is a non-profit advocacy group focused on public awareness about renewable energy and sustainable technology.
+
+We share clear, engaging information about solar power, wind energy, hydropower, geothermal systems, and other clean energy ideas shaping the future of energy around the world.
+
+Our goal is to help people better understand why renewable energy matters, how it works, and how it can support cleaner air, healthier ecosystems, and more sustainable communities.
+
+
+ABOUT SECTION
+-------------
+
+Green Future is a non-profit advocacy group focused on public awareness about renewable energy and sustainable technology.
+
+We provide accessible and engaging information about solar power, wind energy, hydropower, geothermal systems, battery storage, and other forms of sustainable energy infrastructure.
+
+Renewable energy continues to play an important role in conversations about environmental sustainability, energy innovation, and long-term infrastructure planning around the world.
+
+Our organization believes renewable energy is not only about electricity generation. It is also connected to cleaner environments, the protection of natural ecosystems, and the long-term well-being of people, wildlife, forests, oceans, and future generations.
+
+Green Future exists to support informed public discussion and increase awareness about clean energy technologies in a way that is modern, approachable, and easy to understand.
+
+
+MISSION SECTION
+---------------
+
+Our mission is to make renewable energy information clear, accurate, and accessible to the public.
+
+We aim to support thoughtful conversations about sustainability, clean technology, environmental responsibility, and modern energy systems by sharing information that is engaging, informative, and easy to understand.
+
+Green Future encourages greater public awareness about renewable energy technologies and their role in supporting a cleaner and more sustainable future.
+
+
+VISION SECTION
+--------------
+
+Our vision is a future where renewable energy awareness becomes common, practical, and widely understood.
+
+We hope to encourage a more informed public conversation about sustainable energy systems and the role they can play in building cleaner communities, protecting ecosystems, and supporting long-term environmental sustainability.
+
+Green Future envisions a future where modern clean technologies and environmental responsibility work together to support people, wildlife, and the planet.
+
+
+RENEWABLE ENERGY SOURCES
+------------------------
+
+☀ SOLAR ENERGY
+
+Solar panels convert sunlight into electricity and are among the fastest-growing renewable energy technologies worldwide. Solar power systems are increasingly used in homes, commercial buildings, and large-scale energy projects.
+
+🌬 WIND ENERGY
+
+Wind turbines use natural wind movement to generate electricity. Wind energy is widely used in many regions and continues to expand as countries invest in cleaner energy infrastructure.
+
+💧 HYDROPOWER
+
+Hydropower systems use flowing water to produce renewable electricity. Hydropower remains one of the largest renewable energy sources globally and has been used for decades in sustainable energy systems.
+
+🌋 GEOTHERMAL ENERGY
+
+Geothermal systems use heat from beneath the Earth’s surface for electricity generation and heating applications. This renewable energy source provides reliable and consistent power in suitable regions.
+
+
+BENEFITS OF RENEWABLE ENERGY
+----------------------------
+
+Renewable energy technologies are often discussed because they can support cleaner environments, reduce pollution, and contribute to long-term sustainability goals.
+
+Cleaner energy systems may also help support healthier ecosystems, protect natural habitats, and encourage environmental responsibility.
+
+In addition, renewable energy technologies continue to drive innovation in battery storage, smart energy systems, modern infrastructure, and sustainable urban development.
+
+
+FOOTER
+------
+
+Green Future © 2026
+Non-profit Renewable Energy Awareness Initiative
